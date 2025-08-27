@@ -28,14 +28,14 @@ This div is then replaced with a new div containing status and a progress bar th
     hx-target="this"
     hx-swap="innerHTML">
     <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="pblabel">
-      <div id="pb" class="progress-bar" style="width:0%">
+      <div id="pb" class="progress-bar" style="width:0%"></div>
     </div>
   </div>
 </div>
 
 ```
 
-This progress bar is updated every 600 milliseconds, with the "width" style attribute and `aria-valuenow` attributed set to current progress value.
+This progress bar is updated every 600 milliseconds, with the "width" style attribute and `aria-valuenow` attribute set to current progress value.
 Because there is an id on the progress bar div, htmx will smoothly transition between requests by settling the
 style attribute into its new value.  This, when coupled with CSS transitions, makes the visual transition continuous
 rather than jumpy.
